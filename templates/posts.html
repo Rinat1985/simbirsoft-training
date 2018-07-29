@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block h1 %}
+Пицы
+{% endblock %}
+
+{% block content %}
+  {% for post in posts %}
+    <div class='blog-post'>
+      <h3>{{ post.title }}</h3>
+      <p>
+        <span class="text-muted">
+        {{ post.created }} / Заказчик:
+        </span>
+        <a href="/author/{{ post.author }}">{{ post.author }}</a>
+        <span class="text-muted">
+        / статус:
+        </span>
+        <a href="/status/{{ post.author }}">{{ post.status }}</a>
+      </p>
+      <p>{{ post.body }}</p>
+    </div>
+    <hr>
+  {% endfor %}
+{% endblock %}

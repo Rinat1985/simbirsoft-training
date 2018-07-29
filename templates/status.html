@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block h1 %}
+Изменить статус заказа {{ author }}
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <fieldset class="form-group">
+    <legend>Измените статус</legend>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="Неопределен">
+      <label class="form-check-label">Неопределен</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="Отправлен на кухню" checked>
+      <label class="form-check-label">Отправлен на кухню</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="Отправлен в доставку">
+    <label class="form-check-label">Отправлен в доставку</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="Доставлен">
+      <label class="form-check-label">Доставлен</label>
+    </div>
+  </fieldset>
+    <button type="submit" class="btn btn-primary">Изменить</button>
+  </form>
+{% endblock %}

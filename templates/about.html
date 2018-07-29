@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block h1 %}
+Обо мне
+{% endblock %}
+
+{% block content %}
+  <div class="jumbotron">
+    <h1 class="display-4">Я - простой блог</h1>
+    <p class="lead">
+      Создан с помощью веб-фреймворка Flask и CSS-фреймворка Bootstrap
+    </p>
+    <hr class="my-4">
+    <p>На основе меня можно создать свои собственные приложения</p>
+    <a class="btn btn-primary btn-lg" href="http://flask.pocoo.org/" role="button">Подробнее про Flask</a>
+    <a class="btn btn-primary btn-lg" href="https://getbootstrap.com/" role="button">Подробнее про Bootstrap</a>
+  </div>
+{% endblock %}
